@@ -25,7 +25,7 @@ async function main() {
   const Treasury = await ethers.getContractFactory("Treasury");
   const treasury = await Treasury.deploy(
     tokenAddress,       // RWAToken address
-    1000n,              // 1 ETH = 1000 RWA tokens
+    ethers.parseUnits("1000", 18),   // 1 ETH in wei = 1000 RWA tokens in wei
     deployer.address    // admin/owner
   );
   await treasury.waitForDeployment();
