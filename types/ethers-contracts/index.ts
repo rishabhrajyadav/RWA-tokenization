@@ -2,5 +2,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export type { RWAToken } from './RWAToken.js';
+export type { Treasury } from './Treasury.js';
 export * as factories from './factories/index.js';
 export { RWAToken__factory } from './factories/RWAToken__factory.js';
+export { Treasury__factory } from './factories/Treasury__factory.js';

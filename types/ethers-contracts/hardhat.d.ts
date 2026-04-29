@@ -11,12 +11,16 @@ import * as Contracts from "./index.js";
 declare module "@nomicfoundation/hardhat-ethers/types" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
   getContractFactory(name: 'RWAToken', signerOrOptions?: ethers.Signer | FactoryOptions): Promise<Contracts.RWAToken__factory>
+getContractFactory(name: 'Treasury', signerOrOptions?: ethers.Signer | FactoryOptions): Promise<Contracts.Treasury__factory>
 
   getContractAt(name: 'RWAToken', address: string | ethers.Addressable, signer?: ethers.Signer): Promise<Contracts.RWAToken>
+getContractAt(name: 'Treasury', address: string | ethers.Addressable, signer?: ethers.Signer): Promise<Contracts.Treasury>
 
   deployContract(name: 'RWAToken', signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.RWAToken>
+deployContract(name: 'Treasury', signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Treasury>
 
   deployContract(name: 'RWAToken', args: any[], signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.RWAToken>
+deployContract(name: 'Treasury', args: any[], signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Treasury>
 
     // default types
     getContractFactory(
