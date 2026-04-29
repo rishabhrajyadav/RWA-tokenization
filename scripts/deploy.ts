@@ -1,7 +1,7 @@
 import hre from "hardhat";
 
 async function main() {
-  const { ethers } = await hre.network.connect();  
+  const { ethers } = await hre.network.create();  
   const [deployer] = await ethers.getSigners();
   console.log("Deploying with account:", deployer.address);
   console.log("Account balance:", ethers.formatEther(
