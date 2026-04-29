@@ -1,7 +1,7 @@
 import hre from "hardhat";
 
 async function main() {
-  const { ethers } = await hre.network.connect();  
+  const { ethers } = await hre.network.create();  
   const [deployer] = await ethers.getSigners();
   console.log("Deploying with account:", deployer.address);
   console.log("Account balance:", ethers.formatEther(
@@ -37,7 +37,7 @@ async function main() {
   const MINTER_ROLE = await rwaToken.MINTER_ROLE();
   const tx = await rwaToken.grantRole(MINTER_ROLE, treasuryAddress);
   await tx.wait();
-  console.log("MINTER_ROLE granted to Treasury ✅");
+  console.log("MINTER_ROLE granted to Treasury");
 
   // ── 4. Verify setup ────────────────────────────────────────────
   const isMinter = await rwaToken.isMinter(treasuryAddress);
