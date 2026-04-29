@@ -2,3 +2,4 @@
 /* tslint:disable */
 /* eslint-disable */
 export { RWAToken__factory } from './RWAToken__factory.js';
+export { Treasury__factory } from './Treasury__factory.js';
