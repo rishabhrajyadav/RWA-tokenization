@@ -37,7 +37,7 @@ async function main() {
   const MINTER_ROLE = await rwaToken.MINTER_ROLE();
   const tx = await rwaToken.grantRole(MINTER_ROLE, treasuryAddress);
   await tx.wait();
-  console.log("MINTER_ROLE granted to Treasury ✅");
+  console.log("MINTER_ROLE granted to Treasury");
 
   // ── 4. Verify setup ────────────────────────────────────────────
   const isMinter = await rwaToken.isMinter(treasuryAddress);
