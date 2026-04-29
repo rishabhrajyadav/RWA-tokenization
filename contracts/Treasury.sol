@@ -16,7 +16,7 @@ contract Treasury is Ownable, ReentrancyGuard {
     // ─── State ───────────────────────────────────────────────────────────────
     RWAToken public immutable rwaToken;
 
-    /// @notice How many RWA tokens are minted per 1 ETH deposited
+    /// @notice How many RWA tokens (in wei, 18 decimals) are minted per 1 ETH deposited
     uint256 public tokensPerEth;
 
     /// @notice Total ETH deposited into treasury (lifetime)
